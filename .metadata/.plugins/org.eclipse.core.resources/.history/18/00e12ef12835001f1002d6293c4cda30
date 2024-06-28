@@ -1,0 +1,61 @@
+package restAssured;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+
+import static io.restassured.RestAssured.*;
+import io.restassured.response.Response;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+public class CryptoWalletServer {
+	
+	String url ="https://crypto-wallet-server.mock.beeceptor.com";
+	
+	@Test (enabled = false)
+	public void registeruser() {
+		
+		RestAssured.baseURI = url;
+		String token;
+		String type; 
+		
+		JSONObject js = new JSONObject();
+		js.put("username", "user123");
+		js.put("password", "securepassword");
+		js.put("email", "user@example.com");
+		
+		given().contentType(ContentType.JSON).body(js.toJSONString()).when().post("/api/v1/register")
+		.then().statusCode(200).log().all();
+	}
+	
+	@Test (enabled = true)
+	public void loginruser() {
+		
+		RestAssured.baseURI = url;
+		
+		JSONObject js = new JSONObject();
+		js.put("username", "user123");
+		js.put("password", "securepassword");
+				
+		Response rep_body = given().contentType(ContentType.JSON).body(js.toJSONString()).when().post("/api/v1/login")
+		.then().statusCode(200).extract().response();
+		
+		String responce = rep_body.asString();
+		JsonPath jp = new JsonPath(responce);
+		String token = jp.get("access_token");
+		String type = jp.get("token_type");
+	}
+
+	@Test (enabled = true)
+	public void balance() {
+		
+		RestAssured.baseURI = url;
+				
+		given().contentType(ContentType.JSON).when().get("/api/v1/balance")
+		.then().statusCode(200).log().all();
+	}
+	
+}

@@ -1,0 +1,15 @@
+package restAssured;
+
+import io.restassured.RestAssured;
+
+public class CryptoWalletServer {
+	
+	String url ="https://app.beeceptor.com/mock-server/crypto-wallet-server";
+	
+	public void registeruser() {
+		
+		RestAssured.baseURI = url;
+		give
+	}
+
+}

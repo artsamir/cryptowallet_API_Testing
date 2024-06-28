@@ -1,0 +1,23 @@
+package restAssured;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+
+import static io.restassured.RestAssured.*;
+import io.restassured.response.Response;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+
+public class CryptoWalletServer {
+	
+	String url ="https://app.beeceptor.com/mock-server/crypto-wallet-server";
+	
+	public void registeruser() {
+		
+		RestAssured.baseURI = url;
+		
+	}
+
+}

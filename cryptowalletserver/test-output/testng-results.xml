@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-28T08:58:59Z" name="Default suite" finished-at="2024-06-28T08:59:10Z" duration-ms="10394">
+    <groups>
+    </groups>
+    <test started-at="2024-06-28T08:58:59Z" name="Default test" finished-at="2024-06-28T08:59:10Z" duration-ms="10394">
+      <class name="restAssured.CryptoWalletServer">
+        <test-method signature="registeruser()[pri:0, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:58:59Z" name="registeruser" finished-at="2024-06-28T08:59:04Z" duration-ms="4880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registeruser -->
+        <test-method signature="loginuser()[pri:1, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:59:04Z" name="loginuser" finished-at="2024-06-28T08:59:05Z" duration-ms="977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginuser -->
+        <test-method signature="balance()[pri:2, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:59:05Z" name="balance" finished-at="2024-06-28T08:59:06Z" duration-ms="961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- balance -->
+        <test-method signature="transaction()[pri:3, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:59:06Z" name="transaction" finished-at="2024-06-28T08:59:07Z" duration-ms="871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transaction -->
+        <test-method signature="transferTrans()[pri:4, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:59:07Z" name="transferTrans" finished-at="2024-06-28T08:59:08Z" duration-ms="886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transferTrans -->
+        <test-method signature="calculateTrans()[pri:5, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:59:08Z" name="calculateTrans" finished-at="2024-06-28T08:59:09Z" duration-ms="869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- calculateTrans -->
+        <test-method signature="getExchangeRate()[pri:6, instance:restAssured.CryptoWalletServer@4671115f]" started-at="2024-06-28T08:59:09Z" name="getExchangeRate" finished-at="2024-06-28T08:59:10Z" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExchangeRate -->
+      </class> <!-- restAssured.CryptoWalletServer -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
